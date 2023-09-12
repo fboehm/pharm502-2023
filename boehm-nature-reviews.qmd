@@ -1,0 +1,25 @@
+---
+title: "Predicting disease risk from genetics data"
+author: "Frederick Boehm"
+format: pdf
+bibliography: boehm.bib
+---
+
+## Abstract
+
+
+
+## Introduction
+
+The sequencing of the human genome in the early 2000s enabled studies
+to advance understanding of the genetic basis of human diseases and complex traits.
+Subsequent development of high-throughput genotyping and sequencing technologies enabled 
+large-scale collection of genetic data from millions of individuals.
+
+
+
+
+
+
+
+## References
