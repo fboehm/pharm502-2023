@@ -1,5 +1,5 @@
 ---
-title: "Predicting disease risk from genetics data"
+title: "Predicting disease risk from genetics data in the biobank era"
 author: "Frederick Boehm"
 format: pdf
 bibliography: boehm.bib
@@ -11,10 +11,10 @@ bibliography: boehm.bib
 
 ## Introduction
 
-The sequencing of the human genome in the early 2000s enabled studies
-to advance understanding of the genetic basis of human diseases and complex traits.
-Subsequent development of high-throughput genotyping and sequencing technologies enabled 
-large-scale collection of genetic data from millions of individuals.
+Our genes influence many aspects of our health and biology. 
+While all humans share more than 99% of their DNA, every human's DNA contains millions of differences that make it unique.
+These differences not only give us varying heights and eye colors, but they also influence our risk of developing diseases like cancer, diabetes, and heart disease.
+Recent technologies have made it possible to acquire genetic data for millions of people, and this data has been used to identify thousands of genetic differences that influence disease risks.
 
 
 
