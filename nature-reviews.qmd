@@ -1,0 +1,188 @@
+---
+title: "Predicting disease risk from genetics data in the biobank era"
+format: pdf
+bibliography: boehm.bib
+---
+
+## Key Points
+
+1. Polygenic risk scores hold promise as future clinical tools to quantify disease risk.
+1. A polygenic risk score is disease-specific and tries to summarize in a single number a person's genetic susceptibility to a disease.
+1. While there are many statistical methods for constructing polygenic risk scores, they all use weighted sums of minor allele counts at genetic variants.
+1. Advances in technology have enabled affordable acquisition of genetic and phenotypic data from millions of people. 
+1. The large volume of available data for polygenic risk scores requires new statistical methods with efficient computational implementations.
+
+
+
+\newpage
+
+
+## Abstract
+
+I present a brief review of polygenic risk scores in the biobank era. A polygenic risk score for a specified disease aims to summarize and quantify a person's 
+genetic predisposition to the disease. Advances in technology have enabled 
+affordable acquisition of genetic and phenotypic data from millions of people across
+the globe. Over the last ten years, widespread data sharing and 
+an ever-growing volume of genetic data have motivated computationally scalable and
+efficient methods for polygenic risk score construction. Despite their 
+great promise, scientists have yet to fully develop polygenic risk scores for 
+use in clinical medicine and public health. I conclude the review with a discussion 
+of challenges to surmount in order to advance this line of research.
+
+
+## Introduction
+
+Our genes influence many aspects of our health and biology. 
+While all humans share more than 99% of their DNA, every human's DNA contains millions of differences that make it unique.
+These differences, also called genetic variants, not only give us varying heights and eye colors, but they also influence our risk of developing diseases like cancer, diabetes, and heart disease.
+Recent technologies have made it possible to acquire genetic data for millions of people, and this data has been used to identify thousands of genetic variants that influence disease risks. 
+
+More recently, the human genetics research community has invested tremendous time and resources in 
+strategies and tools to quantify the disease risk for individual persons. If we know the genetic variants
+in a person's DNA, can we predict their risk for, for example, coronary artery disease? The most 
+fruitful line of investigation has summarized genetic variants' effects into a single number, 
+termed a polygenic risk score, or PRS, for each person. Because the polygenic risk score for a specified disease is derived from 
+the genetic variants present in nearly every human cell in a person, the polygenic risk score can be 
+calculated sometimes decades before disease onset. Thus, polygenic risk scores offer the possibility of 
+identifying people who are genetically predisposed towards developing a disease. These people may benefit 
+from additional interventions, such as earlier or more frequent disease screening. At the same time, polygenic scores alone 
+don't foretell a future disease; rather, people with higher polygenic risk scores tend to have greater risk of 
+eventually developing the disease.
+
+A rapid increase in genetic data availability has enabled construction and testing of polygenic risk 
+scores for hundreds of diseases. Because most genome-wide association studies (GWAS) use genetic data from single nucleotide polymorphism (SNP) arrays, PRS tend to use SNP genotypes while not explicitly using other classes of genetic variants. Typically, SNP effect estimation and polygenic risk score construction are performed in one set of 
+subjects, the training set, while polygenic risk score assessment involves a separate, non-overlapping, set of subjects, the test set, to reduce statistical biases. 
+
+
+
+## Increasing data availability & growth of biobanks
+
+Development of tissue repositories, also called biobanks, with samples from tens or hundreds of thousands of people has accelerated the demand for computationally efficient statistical methods for PRS construction [@collister2022calculating]. The most widely used biobank to date, the UK Biobank, contains tissue samples for nearly 500,000 British adults [@bycroft2018uk]. Investigators around the world apply for access to UK Biobank data for their research. 
+
+Similar biobank efforts are underway in Finland (FinnGen) [@kurki2023finngen], Estonia [@leitsalu2015cohort], Japan [@nagai2017overview], the USA (All of Us [@all2019all] and Million Veterans Program [@gaziano2016million]), and other locales around the world. They all curate genetic and phenotypic data for their 
+study subjects and share it for research purposes.
+
+The different biobanks offer, at a minimum, genetic and phenotypic data for tens of thousands of people, with some, such as the UK Biobank, containing data for hundreds of thousands. Available phenotypes also differ among biobanks. While the UK Biobank measures tens of thousands of traits - including, for some people gene expression levels and protein abundances, among other molecular traits - some biobanks have measured other traits. Fortunately, many biobanks are using tissue samples to acquire new 
+traits in response to advances in biotechnology. 
+ 
+
+
+
+
+
+
+
+## Sharing GWAS summary statistics
+
+In the last ten years, many investigators have shared summary statistics from GWAS [@yang2012conditional,@barbeira2018exploring,@buniello2019nhgri]. While it is often logistically difficult to share individual-level genetic and phenotypic data, sharing of 
+GWAS summary statistics, incuding the genome-wide SNP effect estimates and their variances and sometimes the linkage disequilibrium patterns for the study subjects, requires less memory storage and avoids many
+data privacy concerns relative to sharing of individual-level data [@macarthur2021workshop].
+
+Some research funders adopted a requirement that investigators publicly share GWAS summary statistics [@thelwall2020useful]. 
+This requirement has promoted widespread availability of GWAS summary statitics for thousands of 
+traits in diverse study populations. One particularly useful resource is the GWAS summary statistics 
+for thousands of UK Biobank traits from a research team at the Broad Institute.
+This development also has motivated PRS methods that use GWAS summary statistics and don't use 
+individual-level data [@lloyd2019improved,@mak2017polygenic]. 
+
+
+
+
+
+
+Genome-wide association studies probe genetic markers, one at a time, across the entire genome to
+identify gene regions where the marker genotypes correlate with disease status. Due to correlation between marker genotypes on a single chromosome, a phenomenon called linkage disequilibrium, it is typical for 
+a group of consecutive markers to all correlate with disease status. 
+
+Sharing of genome-wide association study results, typically termed summary statistics, has propeled the field of human genetics forward over the last ten years. It is now common for scientists to freely and publicly share summary statistics from genome-wide association studies. Other teams of investigators may freely use the summary statistics in their own investigations.
+
+## Methods for polygenic risk score construction
+
+In the most general form, a PRS is calculated as the weighted sum of minor allele counts at a collection of genetic markers [@ma2021genetic]. PRS methods differ in how they determine the weights and in which genetic markers are used in the sum. Three popular methods are clumping and thresholding [@purcell2007plink,@prive2019making], LDpred2 [@prive2020ldpred2], and DBSLMM [@yang2020accurate]. Clumping and thresholding, the earliest PRS method, uses LD patterns among genetic variants to subset the genome-wide collection of markers. The next step in clumping and thresholding selects only those markers with strong disease associations to include in the weighted sum that determines the PRS. Weights for the minor allele counts for the final set of markers often leverage estimated effects from GWAS. 
+
+While clumping and thresholding is easy to implement and computationally fast, researchers have found prediction performance gains with models that impose additional assumptions on SNP effect distributions. 
+For example, LDpred2 depends on a Bayesian model for SNP effects. It assumes that a proportion of the SNPs affect the disease status, while many have no effect. Those SNPs that impact disease status have 
+effects that follow a normal distribution. The LDped2 developers use a probabilistic sampling approach called Gibbs sampling for model fitting and SNP effect estimation. Ease of use and computing speed, as well as predictive performance, have contributed to widespread use of LDpred2.
+
+DBSLMM, which abbreviates Deterministic Bayesian sparse linear mixed model, assumes that SNP effects from across the genome 
+arise from a mixture of two normal distributions that differ only in variance.
+The component with the larger variance accounts for the SNPs with large effects, while the component with 
+the smaller variance accommodates the majority of the genome-wide SNPs, which are assumed to have small effects.
+DBSLMM then assumes that the SNPs with effects belonging to the large variance distribution can be 
+identified by standard GWAS methods, since they tend to have large effects. The remaining
+SNPs are modeled jointly with the small variance distribution and treated as a "polygenic" effect.
+While we have little statistical power to accurately estimate the effects for the individual SNPs in 
+the small variance distribution, DBSLMM demonstrates the ability to collectively model the 
+polygenic effect from all of the small effect SNPs with modest accuracy. This accounts for the better 
+predictive performance of DBSLMM compared to, for example, clumping and thresholding. 
+
+While many other PRS construction methods exist, I've limited discussion here to three of the most popular strategies. @ma2021genetic, writing in 2021, offer a deeper review of construction methods.  
+
+## Pipeline for polygenic risk score construction and applications 
+
+@ma2021genetic, in their review of polygenic risk score methods, presented a flow diagram to 
+summarize the construction and application of polygenic risk scores [@fig-ma]. They divide 
+the procedures into six sequential steps: data input, data processing, model fitting, validation, testing, and
+applications. The data input step involves identification of a suitable training set of subjects. Often, 
+privacy concerns force investigators to share only GWAS summary statistics, such as the effect estimates
+and their variances, so it is important that the chosen construction method accept summary statistics as
+inputs. A test set of subjects, for whom individual-level data is typically available, are also 
+selected in this step. 
+Data processing follows, where investigators perform quality control procedures on the training 
+and test set data [@prive2022identifying]. In the model fitting step, researchers use a PRS construction method, like clumping and thresholding or DBSLMM, to estimate SNP effect sizes from the training data.
+Because some PRS construction methods, such a LDpred2, use models with statistical hyperparameters, @ma2021genetic insert an optional validation step for tuning model hyperparameters as needed. 
+The testing step uses the test set data to evaluate the PRS performance. Using the SNP effect size estimates
+from the model fitting step, researchers calculate a polygenic risk score for each test set subject and use them to evaluate predictive performance through statistics such as area under the curve and pseudo-$R^2$.
+Following testing, many researchers apply the newly developed polygenic risk scores. Risk stratification
+orders the subjects by polygenic risk score, then evaluates potential interventions for those people with the highest polygenic risk scores. The exact threshold for categorizing a person as "high-risk" for a 
+specified disease varies with disease and application goals, but often the top ten percent receives the "high-risk" designatin. Importantly, polygenic risk scores do not lie only between 0 and 1, and, thus, do not directly correspond to a subject's absolute risk of disease.
+
+
+## Current limitations of polygenic risk scores
+
+Clinical applications of polygenic risk scores have been limited [@torkamani2018personal]. Because most GWAS use
+European ancestry subjects, most polygenic risk scores use European ancestry subjects 
+for SNP effect estimation [@buniello2019nhgri]. However, most people don't have European ancestry. In fact, 
+scientists have observed that polygenic risk scores built from data from subjects with European ancestry
+often don't perform well in people with non-European ancestry [@dikilitas2020predictive]. While the sources of 
+these performance discrepancies remains a subject for research, many scientists partially attribute
+it to differing patterns in linkage disequilibrium among ancestral groups [@slatkin2008linkage]. For example, 
+those with (recent) African ancestry tend to have weaker linkage disequilibrium on 
+each chromosome compared to those with European ancestry. @wang2022challenges discussed the issues 
+of equity and fairness in the context of clinical application of polygenic risk scores.
+
+
+
+
+
+
+
+
+## Open questions in PRS methods 
+
+Despite great advances in PRS methods over the last decade, a number of important questions remain. Many of these questions must be answered before we can truly derive the greatest health benefits from genetics data. These open questions include:
+
+1. Given the poor performance of PRS for subjects with non-European ancestry, how do we calculate PRS for any subject, regardless of ancestry [@duncan2019analysis]? 
+2. With the clinical successes of disease risk predictors like the Framingham survey for cardiovascular event prediction, how do we synergize clinical risk assessment with genetic risk assessment to produce even more accurate predictions [@mahmood2014framingham]?
+3. With most PRS methods modeling only additive genetic effects, how do we incorporate gene-gene and gene-environment interactions to achieve better predictions? 
+4. With these PRS methods all being new, and much of the public being skeptical of genetic technologies, how do we effectively communicate the benefits of PRS risk predictions to patients and clinicians [@palk2019potential]? 
+
+
+
+
+
+
+
+\newpage
+
+
+```{r}
+#| label: fig-ma
+#| fig-cap: "Flow diagram for PRS analysis from Ma & Zhou (2021)."
+#| echo: false
+knitr::include_graphics("ma-zhou-2021-review.jpg")
+```
+
+\newpage
+
+## References
