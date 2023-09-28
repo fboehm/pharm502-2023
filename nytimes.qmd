@@ -1,0 +1,32 @@
+---
+title: "Can our genes predict our illnesses?"
+format: pdf
+pdf-engine: xelatex
+mainfont: Arial
+fontsize: 12pt
+date: "September 28, 2023"
+---
+
+The human genome sequencing project of the 1990s and early 2000s ushered in a 
+scientific effort to identify genes that contribute to different diseases, including 
+heart disease, lung cancer, and schizophrenia. Large-scale studies have enrolled 
+millions of people around the world to work towards this goal. They voluntarily collect 
+a tissue sample, such as a cheek swab, saliva collection, or blood draw, from each 
+person in the study. The collected tissue sample contains human cells, and, from
+those cells, scientists can isolate a person's DNA, the alphabet that provides
+the recipe for each person's biology, including their eye color, height, and 
+their tendency to get sick. 
+Scientists use statistical association tests to identify genes that contribute to 
+a person's chances of getting a disease like lung cancer. The statistical association
+tests work by comparing the DNA profiles of people with lung cancer to the 
+DNA profiles of people without lung cancer. Each difference in DNA profile between the two groups, 
+ 1) people with lung cancer and 2) people without lung cancer, points to a gene that contributes to 
+lung cancer.
+By looking across people's entire DNA profiles, scientists can identify many genes that 
+influence lung cancer development. 
+It's important to point out that, in nearly all cases, no single DNA profile dictates 
+that a person will get lung cancer; however, a person's chance of getting lung cancer
+increases if they have a DNA profile that matches those of people who already have lung cancer. 
+
+
+
