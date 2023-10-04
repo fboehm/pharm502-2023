@@ -1,0 +1,20 @@
+---
+format: pdf
+bibliography: boehm.bib
+---
+
+Polygenic risk scores use genetic data to quantify disease risk and thus 
+provide clinicians and public health workers with additional risk factors to inform
+preventive efforts with the goals of enhancing health, lengthening life, and 
+reducing illness and disability.
+Recent technology advances have enabled genotyping and phenotyping of hundreds of thousands of
+individuals as biomedical scientists seek to identify the genetic underpinnings of 
+complex diseases in studies called genome-wide association studies.
+Genome-wide association studies estimate associations between SNPs, one at a time, and a 
+complex disease. 
+Polygenic risk scores leverage genome-wide SNP effects to quantify disease risk. While scientists have developed 
+many statistical methods to calculate polygenic risk scores, current methods 
+demonstrate only weak correlations with disease status. 
+
+
+
