@@ -1,0 +1,10 @@
+---
+format: pdf
+title: "Polygenic score construction with mean field variational inference to model gene-gene interactions"
+date: "October 5, 2023"
+bibliography: boehm.bib
+---
+
+
+
+
