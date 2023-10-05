@@ -1,10 +1,33 @@
 ---
-format: pdf
+format: beamer
 title: "Polygenic score construction with mean field variational inference to model gene-gene interactions"
 date: "October 5, 2023"
 bibliography: boehm.bib
 ---
 
 
+
+## Polygenic score
+
+- Uses genome-wide SNP minor allele counts to produce a number that summarizes genetic risk for a disease of interest, like coronary artery disease  
+- Polygenic scores typically rely on SNP effect estimates from genome-wide association studies  
+- The polygenic score doesn't correspond directly to a numerical probability of disease  
+- Current uses include risk stratification for preventive interventions  
+
+## Constructing polygenic scores
+
+- Existing Bayesian statistical approaches use sampling methods, like Markov chain monte carlo, to draw samples from the posterior distribution
+- Such methods are time-consuming and computationally intensive  
+- We propose to use mean field variational methods to fit Bayesian statistical models for allele effects
+- Variational inference involves using analytical solutions to approximations to the posterior distribution 
+- Requires less time and fewer computing resources
+
+
+## Gene-gene interactions
+
+- Existing polygenic score construction methods consider only SNP main effects and neglect SNP-SNP
+interactions  
+- We hypothesize that our variational inference methods, and the associated reduction in computing requirements, will enable construction of polygenic risk scores that model SNP-SNP interactions
+- We expect polygenic risk scores that model SNP-SNP interactions (and include SNP main effects) to outperform current methods in predictive accuracy
 
 
