@@ -11,7 +11,7 @@ margin-bottom: 1in
 linestretch: 1
 ---
 
-**Significance** (1.5 pages)
+**Significance** 
 
 $\text{\underline{Importance of the Problem to be Addressed}}$
 
@@ -145,7 +145,51 @@ through the clinical and public health preventive measures that our work makes p
 
 
 
-**Innovation** (0.5 pages)
+**Innovation** 
+
+The status quo as it pertains to polygenic risk score construction is to 
+neglect contributions of SNP-SNP interactions to trait values. We depart from the
+status quo by allowing for and modeling SNP-SNP interactions 
+in construction of polygenic risk scores. The modest predictive ability of 
+current polygenic risk score methods motivates the need for advances like those
+that we propose. Without improvements in polygenic risk score construction, 
+proposed interventions that target those with high polygenic risk scores for
+a disease of interest will inaccurately label many individuals as high risk, and 
+thus misallocate clinical and public health resources.
+
+Our strategy to include SNP-SNP interactions is supported by previous reports
+that, for some diseases, SNP-SNP interactions contribute considerably to the 
+trait values [@li2015overview]. The contributions of epistasis to trait values and disease risks motivates the modeling of SNP-SNP interactions. @bateson1909 coined the term "epistasis" and @fisher1919xv developed its modern definition, where epistasis
+is the departure of a trait value from that expected under the "additive" genetic model. @fisher1919xv also recognized the role of epistasis on quantitative trait values.
+@lee2020genome shared an algorithm to detect SNP-SNP interactions in GWAS data sets and applied it to schizophrenia study to identify SNP-SNP interactions in biologically plausible gene pathways.
+
+*The proposed research is innovative, in our opinion, because it represents a 
+substantive departure from the status quo by developing and assessing polygenic risk score methods that leverage SNP-SNP interactions in addition to SNP main effects.*
+
+Our proposed research opens new horizons in clinical, public health, and biostatistical research. In clinical research, the more accurate polygenic risk scores
+that will result from our work will lead to more accurate identification of
+individuals at high risk for disease. This, in turn, will allow more accurate measurement of effects of clinical interventions on disease development. 
+
+Public health research benefits, like those in clinical research, arise from 
+more accurate classification of individuals as being at high risk for disease.
+Specifically, the identification of collections of collections of high risk subjects 
+will enable the tailoring of preventive interventions to reduce 
+disease burden among the most vulnerable. 
+
+Biostatistics, and specifically the field of statistical genetics, 
+will achieve new horizons through our research because we will be the 
+first to characterize the performance of polygenic risk score methods
+that use SNP-SNP interactions. The expected improvement in predictive accuracy 
+for our methods means that they will be widely adopted by other researchers. 
+Furthermore, our research products, such as our highly modular, well documented, 
+and thoroughly tested software products will provide a springboard for 
+further innovations in polygenic score construction methods by 
+ourselves and other research teams.
+
+
+
+
+
 
 
 
