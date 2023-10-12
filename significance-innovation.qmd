@@ -11,8 +11,148 @@ margin-bottom: 1in
 linestretch: 1
 ---
 
-**SIGNIFICANCE**
+**Significance** (1.5 pages)
+
+$\text{\underline{Importance of the Problem to be Addressed}}$
+
+While there are many statistical methods that calculate polygenic risk scores 
+from GWAS summary statistics, current approaches have limited predictive 
+ability. For example, among psychiatric conditions, polygenic risk scores predict 
+only 2% of the liability variance for major depressive disorder [@wray2018genome], 5% for bipolar disorder [@mullins2021genome], 3% for neuroticism [@luciano2018association], and 6% for attention deficit hyperactivity disorder [@demontis2019discovery]. The statistical methods that underlie these polygenic risk score
+calculations all share the assumption that each SNP has only a genetically "additive" effect on the trait. In other words, the methods assume that the 
+trait liability is a weighted sum of minor allele counts at a collection 
+of SNPs, with weights specified 
+by the GWAS estimate of the SNP effect. 
+By making the simplifying assumption that SNP-SNP interactions 
+have no net impact on the trait liability, the investigators 
+restrict the predictive ability of 
+the polygenic risk scores.
+While the incorporation of SNP-SNP interactions into polygenic risk score 
+calculations doesn't fully resolve the limited predictive ability of 
+polygenic risk scores, including the possibility of SNP-SNP interactions
+in polygenic risk score calculations will improve predictive ability 
+over methods that neglect SNP-SNP interactions. The reason for this is 
+that the collection of statistical models with possible
+SNP-SNP interactions contains the collection of statistical models
+without SNP-SNP interactions.
+
+By improving predictive ability of polygenic risk scores 
+beyond current standards, investigators will more accurately target interventions and preventive measures 
+to those individuals at highest risk of disease. Clinical 
+researchers who use polygenic risk scores to counsel 
+patients at high risk for disease will more
+accurately identify high-risk patients, while 
+public health researchers will more accurately identify 
+high-risk populations for targeted preventive measures.
+Together, these efforts will positively impact society by enhancing health, lengthening life, and reducing illness and disability.
+
+Failure to address this issue, by continuing to use current
+polygenic risk score methods that ignore contributions 
+from SNP-SNP interactions, will result in misclassification of 
+individuals into high-risk and low-risk categories. 
+Misclassification of individuals will attenuate measures 
+of intervention effectiveness, since many of the 
+subjects classified as "high-risk", in fact, will truly 
+be low-risk. 
+Thus, interventions that reduce disease burden and extend healthy lifespan in 
+populations will not be widely implemented and potential gains 
+in lifespan and well-being will not be achieved.
+
+
+$\text{\underline{Rigor of the Prior Research Supporting the Aims}}$
+
+*Aim 1 (Literature)*
+
+Technology advances have fueled a resurgence in interest in Bayesian 
+statistical methods. While historically Bayesian approaches
+required time-consuming, computationally intense sampling methods 
+for model fitting and inference, high-performance 
+computers and analytic approximation methods for 
+Bayesian models have accelerated the widespread adoption of Bayesian models for high-dimensional data[@blei2017variational].
+Development of variational inference methods for Bayesian modeling 
+has been especially fruitful. They have propeled analysis of 
+extremely large data sets, including those where traditional linear 
+regression models fail, as when the number of variables is larger than 
+the sample size.
+
+@zhang2019novel developed a variational inference strategy for sparse model 
+selection in logistic regression. In other words, their work 
+imposes the modeling assumption that most SNPs have no effect on 
+the trait, while the remaining small proportion of SNPs all impact the 
+trait. 
+@ray2020spike establish a theoretical foundation for our proposal to 
+use a Bayesian model for high-dimensional logistic regression. In our 
+setting, disease status is the binary outcome variable, while 
+the millions of SNP genotypes per subject 
+are the high-dimensional, dependent variables in the logistic regression model.
+@ray2020spike provide an efficient mean field variational inference approximation that 
+enables accurate variable selection and model inferences.
 
 
 
-**INNOVATION**
+
+
+
+
+
+
+
+*Aim 2 (Literature)*
+
+
+The imposition of sparsity assumptions in our statistical modeling 
+is especially relevant when we incorporate SNP-SNP interactions into 
+our polygenic risk score modeling.
+This is due to the large number of possible 
+SNP-SNP interactions across the genome. Even if we make the reasonable assumption
+that SNP-SNP interactions for SNPs on distinct chromosomes have no effect on the 
+trait, consideration of interactions involving only Chromosome 1 SNPs exceeds $10^{10}$, due to the large number of SNPs on Chromosome 1. Thus, we need to impose a
+sparsity-inducing assumption. In other words, we choose to assume that 
+the majority of SNP-SNP interactions have no effect on the trait. We then let
+our Bayesian model "learn" which SNP-SNP interactions have non-negligible trait 
+effects.
+
+
+
+
+
+
+
+$\text{\underline{Significance of the Expected Research Contribution}}$
+
+Upon successful completion of the proposed research, we expect our 
+contribution to be a computationally efficient and scalable 
+new statistical method for calculating accurate polygenic 
+risk scores. *This contribution is expected to be significant 
+because it will enable accurate identification of 
+individuals at high disease risk and appropriate targeting 
+of preventive interventions.*
+We will freely share our open source, well documented, and thoroughly tested software implementation of 
+our statistical methods to benefit the research community and those 
+who want to build upon our findings. Society will benefit from our research
+through the clinical and public health preventive measures that our work makes possible. Ultimately, our research will promote health, lengthen life, and reduce illness and disability.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Innovation** (0.5 pages)
+
+
+
+
+
+
+\newpage
+
+## References
+
