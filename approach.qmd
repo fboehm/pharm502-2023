@@ -1,0 +1,49 @@
+---
+format: pdf
+bibliography: boehm.bib
+pdf-engine: xelatex
+mainfont: Arial
+fontsize: 11pt
+margin-left: 1in	
+margin-right: 1in
+margin-top: 1in
+margin-bottom: 1in
+linestretch: 1
+---
+
+**Approach** 
+
+Overall Research Design
+
+Specific Aim 1: To use mean field variational methods to provide analytical 
+approximations to the posterior distribution for a Bayesian model with sparsity-inducing prior for polygenic risk
+scores.
+
+Rationale: Historically, posterior parameter inference for Bayesian statistical models has proceeded by a sampling procedure like Markov chain monte carlo sampling. 
+The researcher then analyzescalcul the samples as if she had drawn them from the true posterior distribution. For example, she would estimate a posterior mean by 
+calculating the sample mean of the sample values. Several limitations 
+of Markov chain monte carlo sampling make it desirable to consider alternatives.
+First, Markov chain monte carlo sampling typically involves tens of thousands of samples and thus can be computationally expensive in terms of time and memory. 
+Second, mathematical convergence of the Markov chains to the true asymptotic limiting distribution
+is always approximate. Thus, the chosen samples actually don't belong to the true 
+posterior distribution; instead, they arise from an approximation to the 
+true posterior distribution.
+Recent advances in a collection of mathematical methods called "variaional inference" offer an alternative strategy for posterior inference in Bayesian 
+statistical models.
+
+
+
+
+
+
+
+Specific Aim 2: 
+
+
+
+
+
+\newpage
+
+## References
+
