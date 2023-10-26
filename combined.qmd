@@ -1,0 +1,26 @@
+---
+bibliography: boehm.bib
+pdf-engine: xelatex
+mainfont: Arial
+fontsize: 11pt
+margin-left: 1in	
+margin-right: 1in
+margin-top: 1in
+margin-bottom: 1in
+linestretch: 1
+format:
+  pdf:
+    keep-tex: true
+    include-in-header:
+      - text: |
+          \usepackage{amsmath}
+---
+
+{{< include specific-aims.qmd >}}
+
+
+{{< include significance-innovation.qmd >}}
+
+{{< include approach.qmd >}}
+
+## References

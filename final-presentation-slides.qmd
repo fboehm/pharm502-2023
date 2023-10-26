@@ -1,0 +1,95 @@
+---
+format: beamer
+title: "Polygenic score construction with mean field variational inference to model SNP-SNP interactions"
+date: "October 26, 2023"
+bibliography: boehm.bib
+---
+
+
+
+
+
+
+## Polygenic score
+
+- Uses genome-wide SNP risk allele counts to produce a number - for each person - that summarizes genetic risk for a disease of interest, like coronary artery disease  
+- Typically rely on SNP effect estimates from genome-wide association studies  
+- Current uses include risk stratification for preventive interventions  
+
+
+## Risk Stratification with Polygenic Scores [@lu2022polygenic]
+
+![](ehac093ga1.jpeg){width=300}
+
+
+
+## Genome-wide association studies
+
+- Probe millions of markers, one at a time, across the genome to identify associations with disease  
+- Often use case-control study design  
+- Sample sizes in the hundreds of thousands  
+- Provides estimates of SNP effects 
+
+
+
+## SNP-SNP interactions
+
+- Existing polygenic score construction methods consider only SNP 
+  main effects and neglect SNP-SNP interactions  
+
+Current methods:
+
+$$
+PGS_i = \sum_j g_{ij}\hat\beta_j
+$$
+
+Proposed methods:
+
+$$
+PGS_i = \sum_j g_{ij}\hat\beta_j + \sum_{j < k} g_{ij}g_{ik}\hat\gamma_{jk}
+$$
+
+
+
+
+## SNP-SNP Interactions
+
+- We hypothesize that variational inference methods, and the associated reduction in computing requirements, will enable construction of polygenic risk scores that model SNP-SNP interactions  
+- We expect polygenic risk scores that model SNP-SNP interactions (and include SNP main effects) to outperform current methods in predictive accuracy for some traits, including those with high SNP-SNP heritability   
+
+
+## Specific Aim 1
+
+**We will use mean field variational methods to provide analytic approximations to the posterior distribution for a Bayesian model with sparsity-inducing priors for polygenic risk scores**
+
+## Rationale for Aim 1
+
+Our variational inference-based strategy will diminish computing time and memory requirements while maintaining predictive ability of the sampling-based strategy of @prive2020ldpred2  
+
+## Outcomes for Aim 1
+
+- A computationally scalable and efficient method for constructing polygenic risk scores  
+- Reproducible, open source implementation ensures transparency in our research and provides a valuable analytic tool to human genetics researchers  
+
+## Specific Aim 2
+
+**We will develop a Bayesian statistical model for polygenic risk scores based on SNP effect estimates and estimates for SNP-SNP interaction effects**
+
+## Rationale for Aim 2
+
+- SNP-SNP interactions, in some diseases, explain a non-negligible proportion 
+of the trait variance   
+- Therefore, polygenic risk scores that explicitly model SNP-SNP interactions for these diseases is expected to be more predictive of disease than scores from current models that ignore interactions   
+
+## Outcomes for Aim 2
+
+- A new class of Bayesian statistical models for polygenic risk scores using SNP main effects and SNP-SNP interactions  
+- Well designed, thoroughly tested, reproducible, open source software package that implements our methods  
+
+
+# Thank You!
+
+
+
+## References
+
