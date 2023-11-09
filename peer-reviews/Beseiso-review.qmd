@@ -1,0 +1,130 @@
+---
+title: "Review of Beseiso Proposal"
+format: pdf
+author: Fred Boehm
+date: today
+---
+
+## Overview
+
+The applicant provides a compelling case for the importance of research on transcription start site switching. It is an underexplored topic and the possible implications 
+are important to understanding biology and health and disease processes.
+
+The applicant chooses to explore the canonical example of epithelial to mesenchymal transition (EMT) in breast cancer, which I especially like given the high burden 
+imposed by breast cancer.
+
+The applicant proposes the research while studying for a Ph.D. at the University of 
+Michigan. The applicant presumably has a strong biology background. U of Michigan 
+offers world-class resources for biology research. 
+
+
+
+
+
+
+
+
+
+## Factor 1: Importance of the Research (Significance, Innovation), scored 1-9
+
+Overall, I think this research is quite important. I'm honestly a little surprised
+that it hasn't been done before. The applicant has some nice ideas, but 
+I felt that more detail in the proposal would have nicely emphasized this point.
+
+
+The applicant writes:
+
+> In addition, knowledge of these 5’ UTR regulatory elements can facilitate the prediction of protein output from the mRNA sequence
+
+I felt like this idea was not well explained. It is, in my opinion, a really important consideration. For example, how exactly would the 5' UTR regulatory elements' identities or 
+structures enable prediction of protein outputs? 
+
+The applicant could have said more about prior limitations about construction of genomewide TSS switching sites. Doing so likely would have made me even more enthusiastic about the
+research. Why has this research not been done before? 
+
+> I will identify 5′ UTR isoforms with significant differences in translational potential.
+
+The above sentence is an example of a sentence that seems to contain a really important 
+idea, yet I feel that it is not conveyed precisely or completely. For example, what is the 
+meaning of "translational potential"? How do you know if you have 
+"significant differences" in translational potential?
+
+
+
+
+
+
+
+## Factor 2: Rigor and Feasibility (Approach), scored 1-9
+
+Overall, I feel like the applicant's approach is feasible. I would have 
+been more enthusiastic about this proposal if the applicant had provided
+more information about the rigor of prior research. Additionally, 
+the applicant doesn't adequately describe some concepts in the proposal, which 
+isn't reassuring.
+
+I do worry a little about the proposed timeline. Can the applicant really 
+complete the proposed research in 2 years? Maybe, but I am unsure about this.
+
+The timeline table might benefit from more detail. Also, I feel like 
+the applicant might want to justify the 2-year timeline. What has the 
+applicant done, or what skills does the applicant already have, that might
+justify an apparently short timeline?
+
+Given the diverse data that require analysis in this proposal, I would
+have appreciated discussion of the applicant's computational and 
+data analytic skills. Does the applicant have the skills to complete
+the proposed analyses? And, if not, does the applicant 
+have resources to learn the necessary skills?  
+
+
+
+
+For example, the applicant writes:
+
+> Significance in RRSs between isoforms will be determined with a Bonferroni-corrected two-tailed t test
+
+However, the applicant doesn't justify the use of a t-test. I expected 
+to see a mention of the assumptions needed for reasonable inferences from a t-test 
+and a justification of why those assumptions are met in this setting.
+
+In aim 2, the applicant writes:
+
+> Since the shorter 5′ UTR isoforms of the plasticity inducing proteins SNAIL and NANOG were reported to be preferentially translated in stressed breast cancer cells that mimic an EMT signature. 
+
+What exactly does the applicant mean by the terms "EMT signature" and "mimic"? I feel like these ideas could be quantitatively defined, but they are not.
+
+
+
+
+
+
+## Factor 3: Expertise and Resources (Investigator, Environment), to be evaluated as either sufficient for the proposed research or not (in which case reviewers must provide an explanation)
+
+While the applicant's biosketch is unavailable, the applicant is a graduate trainee at 
+the University of Michigan, so I expect that the applicant has a strong background 
+in molecular biology. The applicant's experience in data analysis and computing is 
+not discussed, which is a little concerning.
+
+Given that the applicant is proposing research in a well funded and highly productive 
+biology department at the University of Michigan, I expect that the research environment 
+is excellent. The department's resources are world-class.
+
+**Thus, I believe that the expertise and resources probably are sufficient for the proposed research.**
+
+
+
+## Overall Impact
+
+Likely to be quite high, but attention to detail in the proposal might have made this clearer. 
+A justification for what seems to me to be an 
+accelerated timeline would have increased my enthusiasm.
+
+
+
+
+
+
+
+
+
